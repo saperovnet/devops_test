@@ -6,7 +6,7 @@ Please setup Building / Deployment pipeline for the given project
 
 The project sources are located at: https://github.com/GamePoint-LG/devops_test.git
 Project itself is a web application generated with start.spring.io.
-There are two branches in repository - master and develop.
+There are two branches in repository - *master* and *develop*.
 
 ## Build prerequisites 
 * maven
