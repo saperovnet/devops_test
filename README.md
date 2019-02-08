@@ -13,12 +13,12 @@ There are two branches in repository - master and develop.
 * java
 
 ## Build instructions
-  mvn clean install 
+`mvn clean install` 
 
 Result artifact will be stored in ./target folder after successful build process.
 
 ## Run instructions 
-  java -jar application_name.jar
+`java -jar application_name.jar`
 
 ## Expected behavior
 Web app is up and listening on 8080 port. It is available at http://localhost:8080/up
