@@ -5,10 +5,9 @@ node {
     def rtMaven = Artifactory.newMavenBuild()
     def buildInfo
 
- //   stage('Clone sources') {
-        // git branches: [[name: '*/develop']], url: 'https://github.com/saperovnet/devops_test.git'
-   //     sh 'git clone --single-branch --branch ${env.GWBT_BRANCH}  https://github.com/${env.GWBT_REPO_FULL_NAME}.git'
-    //}
+    stage('Clone sources') {
+        git url: 'https://github.com/saperovnet/devops_test.git'
+   }
 
     stage('Artifactory configuration') {
         // Tool name from Jenkins configuration
