@@ -6,7 +6,7 @@ node {
     def buildInfo
 
     stage('Clone sources') {
-        git url: 'https://github.com/saperovnet/devops_test.git'
+       // git url: 'https://github.com/saperovnet/devops_test.git'
    }
 
     stage('Artifactory configuration') {
