@@ -7,6 +7,7 @@ node {
 
     stage('Clone sources') {
        // git url: 'https://github.com/saperovnet/devops_test.git'
+       checkout scm 
    }
 
     stage('Artifactory configuration') {
