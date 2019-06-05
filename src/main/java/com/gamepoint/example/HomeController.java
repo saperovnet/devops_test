@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("")
 public class HomeController {
-
     @RequestMapping("/up")
     public String up() {
         throw new RuntimeException("Error");
