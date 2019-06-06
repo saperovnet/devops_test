@@ -23,6 +23,7 @@ node {
     }
 
     stage('Publish build info') {
+        buildInfo.name = env.BRANCH_NAME
         server.publishBuildInfo buildInfo
     }
 }
