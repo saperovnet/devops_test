@@ -21,7 +21,7 @@ node {
     }
 
     stage('Maven build') {
-        buildInfo = rtMaven.run pom: 'pom.xml', goals: "clean install -Djar.finalName=example-0.0.1-${env.BRANCH_NAME}-SNAPSHOT"
+        buildInfo = rtMaven.run pom: 'pom.xml', goals: 'clean install -Djar.finalName=example-0.0.1-${env.BRANCH_NAME}-SNAPSHOT'
     }
 
     stage('Publish build info') {
