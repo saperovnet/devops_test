@@ -31,6 +31,10 @@ node {
         sh "scp target/example-*-SNAPSHOT.jar root@10.128.0.11:/opt/gp-test/gp-app.jar"
         sh "ssh root@10.128.0.11 'systemctl start gp-app'"
         sh "ssh root@10.128.0.11 'systemctl status gp-app'"
+        sh "ssh root@10.128.0.16 'systemctl stop gp-app'"
+        sh "scp target/example-*-SNAPSHOT.jar root@10.128.0.16:/opt/gp-test/gp-app.jar"
+        sh "ssh root@10.128.0.16 'systemctl start gp-app'"
+        sh "ssh root@10.128.0.16 'systemctl status gp-app'"
     }
     stage ('Http test'){
         sleep 10
