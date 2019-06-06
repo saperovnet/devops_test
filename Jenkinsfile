@@ -32,5 +32,10 @@ node {
         sh "ssh root@10.128.0.11 'systemctl start gp-app'"
         sh "ssh root@10.128.0.11 'systemctl status gp-app'"
     }
-    
+    stage ('Http test'){
+        def backend1_response = httpRequest 'http://35.193.171.181:8080/up'
+        def backend2_response = httpRequest 'http://34.66.138.84:8080/up'
+        println("Backend1 status: "+backend1_response.status)
+        println("Backend2 status: "+backend2_response.status)
+    }
 }
