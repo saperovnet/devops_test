@@ -28,7 +28,7 @@ node {
     
     stage ('Deploy') {
         sh "ssh root@10.128.0.11 'systemctl stop gp-app'"
-        sh "scp target/example-0.0.1-SNAPSHOT.jar root@10.128.0.11:/opt/gp-test/gp-app.jar"
+        sh "scp target/example-*-SNAPSHOT.jar root@10.128.0.11:/opt/gp-test/gp-app.jar"
         sh "ssh root@10.128.0.11 'systemctl start gp-app'"
         sh "ssh root@10.128.0.11 'systemctl status gp-app'"
     }
