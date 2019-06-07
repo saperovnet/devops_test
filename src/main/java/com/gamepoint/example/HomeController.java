@@ -9,6 +9,6 @@ public class HomeController {
 
     @RequestMapping("/up")
     public String up() {
-        return "UP";
+        return "UP-Test webhook";
     }
 }
